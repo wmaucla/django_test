@@ -14,5 +14,4 @@ The second item is name, i.e. that gets appended to the url: localhost:8000/webp
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('name', views.get_name, name='name'),
 ]
