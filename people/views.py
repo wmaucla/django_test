@@ -3,6 +3,14 @@ from django.urls import reverse_lazy
 
 from people.models import Person
 from people.forms import PersonForm
+from rest_framework import viewsets
+from .serializers import PersonSerializer
+
+
+class PersonSerializerView(viewsets.ModelViewSet):
+    queryset = Person.objects.all()
+    serializer_class = PersonSerializer
+
 
 
 class PersonListView(ListView):

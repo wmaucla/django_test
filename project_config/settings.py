@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'webpage.apps.WebpageConfig',
     'people',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
