@@ -25,7 +25,7 @@ SECRET_KEY = 'vp-0rke=$u$g7yn6w=l$02+f!*y4uizr_x4k*l@w!4u2xb(68g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", "usez5x32ya.execute-api.us-west-2.amazonaws.com"]
 
 
 # Application definition
@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'people',
     'rest_framework',
     'drf_yasg',
-    'oauth2_provider'
+    'oauth2_provider',
+    'django_s3_storage'
 ]
 
 MIDDLEWARE = [
@@ -142,11 +143,14 @@ SWAGGER_SETTINGS = {
             }
         }
     },
-    'OAUTH2_REDIRECT_URL': 'http://localhost/static/drf-yasg/swagger-ui-dist/oauth2-redirect.html',
-    'OAUTH2_CONFIG': {
-        'clientId': 'yourAppClientId',
-        'clientSecret': 'yourAppClientSecret',
-        'appName': 'your application name'
-
-    },
 }
+
+
+S3_BUCKET = "zappa-1so6b6yd5"
+
+STATICFILES_STORAGE = "django_s3_storage.storage.StaticS3Storage"
+
+AWS_S3_BUCKET_NAME_STATIC = S3_BUCKET
+
+STATIC_URL = "https://%s.s3.amazonaws.com/" % S3_BUCKET
+
