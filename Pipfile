@@ -17,6 +17,7 @@ django-s3-storage = "*"
 django-rest-swagger = "*"
 coreapi = "*"
 zappa = "*"
+django-s3-sqlite = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.6"

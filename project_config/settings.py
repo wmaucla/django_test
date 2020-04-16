@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     'oauth2_provider',
-    'django_s3_storage'
+    'django_s3_storage',
+    "django_s3_sqlite"
 ]
 
 MIDDLEWARE = [
@@ -83,9 +84,10 @@ WSGI_APPLICATION = 'project_config.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    "default": {
+        "ENGINE": "django_s3_sqlite",
+        "NAME": "db.sqlite3",
+        "BUCKET": "zappa-1so6b6yd5",
     }
 }
 
