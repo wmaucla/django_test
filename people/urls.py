@@ -28,10 +28,11 @@ router.register(r'person', PersonSerializerView, basename='Person')
 
 
 urlpatterns = [
-    path(r'swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
+    path(r'swagger(?P<format>\.json|\.yaml)', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     path(r'swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path(r'redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     path('people-serializer/', include(router.urls)),
+    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     path('people/', PersonListView.as_view(), name='person_list'),
     path('people/add/', PersonCreateView.as_view(), name='person_add'),
     path('people/<int:pk>/edit/', PersonUpdateView.as_view(), name='person_edit'),

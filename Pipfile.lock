@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0a6d246fec2794009cb44e28af7afa97804029dab5ffb30c97b3fc22e02b078c"
+            "sha256": "6b16c16089d9833857f611ab667730891a30b59fbfc50c1bf99017d7f17fc0e2"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -66,6 +66,14 @@
             ],
             "index": "pypi",
             "version": "==1.9.0"
+        },
+        "django-oauth-toolkit": {
+            "hashes": [
+                "sha256:28508f83385ab4313936ddedfb310eaa8a1dcb737153d2956383ce47e75c2fab",
+                "sha256:d5a1044af9419ddc048390c5974777ea97874e5b78e33c609e17eebb8423afb2"
+            ],
+            "index": "pypi",
+            "version": "==1.3.2"
         },
         "djangorestframework": {
             "hashes": [
@@ -147,6 +155,13 @@
                 "sha256:e8313f01ba26fbbe36c7be1966a7b7424942f670f38e666995b88d012765b9be"
             ],
             "version": "==1.1.1"
+        },
+        "oauthlib": {
+            "hashes": [
+                "sha256:bee41cc35fcca6e988463cacc3bcb8a96224f470ca547e697b604cc697b2f889",
+                "sha256:df884cd6cbe20e32633f1db1072e9356f53638e4361bef4e8b03c9127c9328ea"
+            ],
+            "version": "==3.1.0"
         },
         "packaging": {
             "hashes": [

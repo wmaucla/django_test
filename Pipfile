@@ -12,6 +12,11 @@ djangorestframework = "*"
 pyyaml = "*"
 uritemplate = "*"
 drf-yasg = "*"
+django-oauth-toolkit = "*"
+django-s3-storage = "*"
+django-rest-swagger = "*"
+coreapi = "*"
+zappa = "*"
 
 [requires]
 python_version = "3.7"

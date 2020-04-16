@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'webpage.apps.WebpageConfig',
     'people',
     'rest_framework',
-    'drf_yasg'
+    'drf_yasg',
+    'oauth2_provider'
 ]
 
 MIDDLEWARE = [
